@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ficha ALIEN</title>
+<style>
+:root{--bg:#050b0c;--pn:#0c1718;--ln:#2b5a58;--tx:#cfe3df;--mu:#7fa5a0;--ac:#5fe0d0;--in:#d9e6e2;--it:#0a1213}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.4 "Segoe UI",system-ui,sans-serif;display:flex;flex-direction:column;height:100vh}
+header{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--ln);flex-wrap:wrap}
+header h1{font-size:18px;margin:0;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);font-weight:600}
+#who{color:var(--tx);letter-spacing:.04em;font-size:15px}
+#chips{margin-left:auto;display:flex;gap:10px;font-size:12px;color:var(--mu)}
+#chips b{color:var(--ac)}
+#close{background:none;border:1px solid var(--ln);color:var(--tx);border-radius:6px;cursor:pointer;padding:3px 9px}
+nav{display:flex;gap:4px;padding:8px 14px 0;border-bottom:1px solid var(--ln);overflow-x:auto}
+nav button{background:none;border:1px solid transparent;border-bottom:0;color:var(--mu);padding:7px 14px;cursor:pointer;font:inherit;letter-spacing:.08em;text-transform:uppercase;font-size:12px;border-radius:8px 8px 0 0;white-space:nowrap}
+nav button.on{color:var(--ac);border-color:var(--ln);background:var(--pn)}
+main{flex:1;overflow:auto;padding:14px}
+.tab{display:none}.tab.on{display:block}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-bottom:12px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.card{background:var(--pn);border:1px solid var(--ln);border-radius:10px;padding:12px 14px;margin-bottom:12px;min-width:0}
+.grid2 .card{margin-bottom:0}
+.card h3{margin:0 0 10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);font-weight:600}
+h4{margin:14px 0 6px;font-size:12px;letter-spacing:.08em;color:var(--mu);font-weight:500;text-transform:uppercase}
+.f{display:block;margin-bottom:8px}.f span{display:block;font-size:11px;color:var(--mu);letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.f span:empty{display:none}
+input,textarea,select{width:100%;background:var(--it);border:1px solid var(--ln);color:var(--in);border-radius:6px;padding:7px 9px;font:inherit}
+textarea{resize:vertical}
+input:focus,textarea:focus,select:focus,button:focus-visible{outline:2px solid var(--ac);outline-offset:1px}
+.bx{display:flex;gap:6px;flex-wrap:wrap}
+.bx span{width:26px;height:26px;border:1.5px solid var(--ln);border-radius:5px;cursor:pointer;background:var(--it)}
+.bx span.on{background:var(--ac);border-color:var(--ac)}
+.bx span.off{opacity:.25;cursor:not-allowed}
+.hint{font-size:12px;color:var(--mu);margin:8px 0 0}
+.attr label{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--mu);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.attr input{width:70px;text-align:center;font-size:18px;color:var(--ac)}
+.sk{display:grid;grid-template-columns:1fr 34px 64px;gap:8px;align-items:center;padding:6px 0;border-top:1px solid #16302f}
+.sk input{text-align:center}
+.pool{text-align:center;color:var(--mu);font-size:13px}
+.step{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.step span{flex:1;font-size:12px;color:var(--mu);letter-spacing:.08em;text-transform:uppercase}
+.step button{width:30px;height:30px;border-radius:6px;border:1px solid var(--ln);background:var(--it);color:var(--ac);font-size:16px;cursor:pointer}
+.step b{min-width:26px;text-align:center;font-size:18px;color:var(--ac)}
+.chk{display:flex;align-items:center;gap:10px;padding:6px 0;border-top:1px solid #16302f}
+.chk input{width:18px;height:18px;accent-color:var(--ac)}
+.wp{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:6px;margin-bottom:6px}
+.wp.cap{order:-1;font-size:11px;color:var(--mu);letter-spacing:.08em;text-transform:uppercase;margin:0 0 4px}
+#wpbox{display:flex;flex-direction:column}
+.eq{display:flex;align-items:center;gap:8px;margin-bottom:5px}.eq i{width:22px;color:var(--mu);font-style:normal;text-align:right}
+.empty main,.empty nav,.empty #chips{display:none}
+#msg{display:none;padding:28px 20px;color:var(--mu);text-align:center}
+.empty #msg{display:block}
+@media(max-width:520px){.wp{grid-template-columns:1fr 1fr}}
+</style></head>
+<body>
+<header><h1>Ficha ALIEN</h1><span id="who"></span><div id="chips"></div><button id="close" hidden>Fechar</button></header>
+<div id="msg">Nenhum personagem selecionado. Clique em um token e abra a ficha pelo menu do token ou pelo ícone da extensão.</div>
+<nav id="tabs"></nav>
+<main id="main"></main>
+<script src="app.js"></script>
+</body></html>

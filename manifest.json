@@ -1,0 +1,16 @@
+{
+  "name": "Ficha ALIEN RPG",
+  "version": "1.0.0",
+  "manifest_version": 1,
+  "description": "Ficha de personagem de ALIEN RPG ligada aos tokens, com estado, equipamento e bloco de notas.",
+  "author": "Adilson",
+  "icon": "/alien-owlbear/icon.svg",
+  "background_url": "/alien-owlbear/bg.html",
+  "action": {
+    "title": "Ficha ALIEN",
+    "icon": "/alien-owlbear/icon.svg",
+    "popover": "/alien-owlbear/index.html",
+    "width": 780,
+    "height": 640
+  }
+}
